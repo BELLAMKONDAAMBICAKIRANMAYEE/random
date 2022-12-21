@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PassCode</title>
+    <script>
+       
+        function validate(){
+            var output=document.getElementById("happy");
+            var i;
+            var password="";
+            var values="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$%^&*";
+            alert("random password generation")
+            /*console.log(values.length)
+            console.log(Math.random()*values.length);
+            console.log(str.charAt(Math.random()*values.length));*/
+            for(i=0;i<=8;i++){
+                var newChar=Math.random()*values.length;
+                password=password+values.charAt(newChar);
+            }
+            output.innerHTML=password
+        }
+    </script>
+</head>
+<body>
+    <h1>Hey everyone thankyou for visting this page</h1>
+    <p id="happy"></p>
+    <button onclick="validate()">Submit</button>
+</body>
+</html>
